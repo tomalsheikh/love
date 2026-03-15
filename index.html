@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>I Love You</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(45deg,#ff4e50,#fc913a);
+    font-family:Arial;
+    overflow:hidden;
+}
+
+h1{
+    font-size:80px;
+    color:white;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+        transform:scale(1);
+    }
+    to{
+        text-shadow:0 0 30px pink;
+        transform:scale(1.1);
+    }
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    font-size:20px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-10vh);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>I Love You ❤️ Eid e ekta Punjabi gift koro tahole haate mehedi lagay dibo 🫣</h1>
+
+<script>
+for(let i=0;i<30;i++){
+    let heart=document.createElement("div");
+    heart.innerHTML="❤️";
+    heart.className="heart";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(3+Math.random()*5)+"s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
